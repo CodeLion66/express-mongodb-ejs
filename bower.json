@@ -1,0 +1,24 @@
+{
+  "name": "chensx",
+  "description": "movie",
+  "main": "app.js",
+  "authors": [
+    "chensx"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "movie",
+    "chensx"
+  ],
+  "homepage": "https://github.com/chenshixue/express-mongodb-ejs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,36 +1,31 @@
 var express = require('express')
 var path = require("path")
+
+var mongoose = require('mongoose')
+var _ = require('underscore')
+var Movie = require('./models/movie')
+
 var port = process.env.PORT || 3000
 var app = express()
+
+mongoose.connection.openUri('mongodb://localhost/movie')
 
 app.set('views', './views/pages')
 app.set('view engine', 'ejs')
 app.listen(port)
 
-console.log('server start')
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
+console.log('imooc started on port ' + port)
 
 // index page
 app.get('/', function(req, res) {
-	res.render('index', {
-		title: '首页',
-		movies: [{
-			title: '机械战警',
-			_id: 1,
-			poster: 'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		}, {
-			title: '机械战警',
-			_id: 2,
-			poster: 'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		}, {
-			title: '机械战警',
-			_id: 3,
-			poster: 'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		}, {
-			title: '机械战警',
-			_id: 4,
-			poster: 'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		}]
+	Movie.fetch(function(err, movies) {
+		if (err) console.log(err)
+		
+		res.render('index', {
+			title: '首页',
+			movies: movies
+		})
 	})
 })
 
