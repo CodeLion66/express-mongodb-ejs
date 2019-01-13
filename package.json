@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "movie",
   "main": "app.js",
+<<<<<<< HEAD
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,10 +13,24 @@
     "mongoose": "~3.8.8",
     "underscore": "~1.6.0"
   },
+=======
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.3",
+    "moment": "^2.23.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+>>>>>>> 3f7f854c24ae26716e487f4328d800ed7fddbfaf
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chenshixue/express-mongodb-ejs.git"
   },
+<<<<<<< HEAD
   "author": "chensx",
   "license": "ISC",
   "keywords": [
@@ -29,4 +44,16 @@
   "devDependencies": {
     "ejs": "^2.6.1"
   }
+=======
+  "keywords": [
+    "movie",
+    "chensx"
+  ],
+  "author": "chensx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenshixue/express-mongodb-ejs/issues"
+  },
+  "homepage": "https://github.com/chenshixue/express-mongodb-ejs#readme"
+>>>>>>> 3f7f854c24ae26716e487f4328d800ed7fddbfaf
 }
