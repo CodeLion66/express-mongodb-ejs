@@ -1,0 +1,32 @@
+{
+  "name": "chensx",
+  "version": "0.0.1",
+  "description": "movie",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "~3.5.0",
+    "moment": "~2.5.1",
+    "mongoose": "~3.8.8",
+    "underscore": "~1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenshixue/express-mongodb-ejs.git"
+  },
+  "author": "chensx",
+  "license": "ISC",
+  "keywords": [
+    "chensx",
+    "movie"
+  ],
+  "bugs": {
+    "url": "https://github.com/chenshixue/express-mongodb-ejs/issues"
+  },
+  "homepage": "https://github.com/chenshixue/express-mongodb-ejs#readme",
+  "devDependencies": {
+    "ejs": "^2.6.1"
+  }
+}
