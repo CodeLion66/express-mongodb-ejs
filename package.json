@@ -6,11 +6,16 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mongoose": "^5.4.3",
+    "grunt": "^1.0.3",
     "moment": "^2.23.0",
+    "mongoose": "^5.4.3",
     "underscore": "^1.8.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-nodemon": "^0.5.4",
+    "grunt-contrib-watch": "^1.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
