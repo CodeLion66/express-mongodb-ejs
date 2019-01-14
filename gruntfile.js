@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       ejs: {
-        files: ['views/**'],
+        files: ['app/views/**'],
         option: {
           livereload: true
         }
