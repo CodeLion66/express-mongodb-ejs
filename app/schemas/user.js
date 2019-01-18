@@ -49,13 +49,13 @@ userSchema.pre('save', function(next) {
 			if (err) next(err)
 
 			user.password = hash
-		})
 
-		next()
+			next()
+		})		
 	})	
 })
 
-userSchema.method = {
+userSchema.methods = {
 	comparePassword: function(_password, cb) {
 		bcrypt.compare(_password, this.password, function(err, isMath) {
 			if (err)  return cb(err)
