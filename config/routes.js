@@ -11,7 +11,7 @@ module.exports = (app) => {
     let _user = req.session.user
     app.locals.user = _user ? _user : ''
     next()
-  })
+  }) 
 
   // index page
   app.get('/', Index.index)
@@ -24,12 +24,13 @@ module.exports = (app) => {
   app.get('/logout', User.logout)
   app.get('/admin/user/list', User.signinRequired, User.adminRequired, User.list)
 
-
   // movie page
   app.get('/movie/:id', Movie.detail)               // 详情播放页
+
   app.post('/admin/movie', Movie.save)              // 保存
   app.get('/admin/movie/new', Movie.new)            // 新建
   app.get('/admin/movie/update/:id', Movie.update)  // 编辑
+  app.get('/admin', Movie.list)                     // 后台视频列表
   app.get('/admin/movie/list', Movie.list)          // 后台视频列表
   app.delete('/admin/movie/list', Movie.del)        // 视频删除
 

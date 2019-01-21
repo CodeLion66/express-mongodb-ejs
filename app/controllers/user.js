@@ -74,7 +74,7 @@ exports.list = (req, res) => {
 
 // 退出
 exports.logout = (req, res) => {
-  delete req.session.user
+  req.session.destroy()
 
   res.redirect('/')
 }

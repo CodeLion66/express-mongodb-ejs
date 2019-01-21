@@ -4,7 +4,8 @@
   }
 </style>
 <% include ../includes/header %>
-    <div class="container">
+    <% include ../includes/left %>
+    <div class="container nav-right">
     	<div class="row">
         <form class="form-horizontal" method="post" action="/admin/movie">
           <input type="hidden" name="movie[_id]" value="<%= movie._id %>")>

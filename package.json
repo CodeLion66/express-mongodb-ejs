@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^3.0.2",
+    "btoa": "^1.2.1",
     "connect-mongo": "^2.0.3",
     "connect-multiparty": "^2.2.0",
     "cookie-parser": "^1.4.3",
@@ -12,6 +13,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "grunt": "^1.0.3",
+    "markdown-it": "^8.4.2",
     "moment": "^2.23.0",
     "mongoose": "^5.4.3",
     "morgan": "^1.9.1",

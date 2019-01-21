@@ -1,0 +1,64 @@
+<% include ../includes/header %>
+  <div class="container my-md-3">
+    <div class="card my-md-3">
+      <div class="card-header">
+        <h3><%= keyword %></h3>
+      </div>
+      <div class="card-body">
+        <% if (movies && movies.length > 0) { %>
+          <div class="row justify-content-around">
+            <% for (item of movies) { %>
+              <div class="col-md-3">
+                <div class="thumbnail">
+                  <a href="/movie/"+ item._id>
+                    <img src="<% item.poster %>" alt="<% item.title %>" class="poster">
+                  </a>
+                    
+                  <div class="caption">
+                    <h4><%= item.title %></h4>
+                    <p></p>: <a href="/movie/<% item._id %>" role="button" class="btn btn-block btn-primary">观看预告片</a> 
+                  </div>
+                </div>
+              </div> 
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+    </div>
+      
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-md-center">
+        <% for(var i = 0; i < totalPage; i ++ ) { %>
+          <% if (currentPage == (i+1)) { %>
+            <li class="active page-item">
+              <span class="page-link"><%= currentPage %></span>
+            </li>
+          <% } else { %>
+            <li class="page-item">
+              <a href="/results?p=<%= i %>&<%= query %>" class="page-link"><%= i+1 %></a>
+            </li>
+          <% } %>
+        <% } %>
+      </ul>
+    </nav>
+      
+    <div class="row">
+      <div class="col-12">
+        <span></span>&nbsp;
+      </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-12">
+        <span></span>&nbsp;
+      </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-12">
+        <span></span>&nbsp;
+      </div>
+    </div>
+  </div>
+
+<% include ../includes/footer %>
