@@ -23,7 +23,6 @@ var movieSchema = new mongoose.Schema({
 });
 
 movieSchema.pre('save', function(next) {
-	console.log(this);
 	if (this.isNew) {
 		this.meta.createAt = this.meta.updateAt = Date.now();
 	} else {

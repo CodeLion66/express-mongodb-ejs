@@ -11,7 +11,7 @@ const mongoStore = require('connect-mongo')(session)
 
 const app = express()
 
-let port = process.env.port || 3001
+let port = process.env.port || 3000
 let env = process.env.NODE_ENV || 'development'
 let dbUrl = 'mongodb://127.0.0.1:27017/movie'
 
@@ -39,8 +39,9 @@ app.use(session({
   })
 }))
 
+
 // mongoose.connection.openUri('mongodb://localhost/movie')
-mongoose.connect(dbUrl, {useNewUrlParser:true}, function(err) {
+mongoose.connect(dbUrl, {useCreateIndex: true, useNewUrlParser: true}, function(err) {
 　if (err) {
 　　console.log('Connection Error:' + err)
 　} else {
@@ -54,7 +55,7 @@ if (app.get('env') === 'development') {
   app.set('showStackError', true)
   app.use(logger(':method :url :status'))
   app.locals.pretty = true
-  mongoose.set('debug', true)
+  // mongoose.set('debug', true)
 }
 
 require('./config/routes')(app)
@@ -62,5 +63,3 @@ require('./config/routes')(app)
 app.use(express.static(path.join(__dirname, 'public')))
 app.locals.moment = require('moment')
 app.listen(port)
-
-console.log('imooc started on port ' + port)
